@@ -3,9 +3,12 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableHighlight, Image } from 'react-native';
 
 export default class LikeButton extends React.Component{
-	state = {
+	constructor(props) {
+	super(props);
+	this.state = {
 			liked: false,
 		};
+	}
 
 	handleLikeButton = () => {
 		this.setState({
@@ -52,3 +55,4 @@ const styles = StyleSheet.create({
 		tintColor: '#f1f1f1',
 	},
 });
+
